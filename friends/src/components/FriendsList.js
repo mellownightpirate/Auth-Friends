@@ -13,9 +13,11 @@ class FriendsList extends React.Component {
   }
 
   getData = () => {
+    
     axiosWithAuth()
-      .get("/friends")
+      .get("http://localhost:5000/api/friends")
       .then(res => {
+        
         console.log(res);
         this.setState({
           friends: res.data
